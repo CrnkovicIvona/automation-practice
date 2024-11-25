@@ -1,142 +1,49 @@
-# E-commerce Test Automation Framework
+# Webshop Test Automation
 
 ## Overview
-This project is a comprehensive test automation framework built for testing an e-commerce website (AutomationPractice). It demonstrates automated end-to-end testing of various e-commerce functionalities including user registration, product browsing, shopping cart management, and order processing.
+Projektni zadatak je automatizacija testiranja web stranice (AutomationPractice). Automatizirano je end-to-end testiranje različitih funkcionalnosti kao što su registracija korisnika, pregled proizvoda, upravljanje košaricom, plaćanje i potvrda o narudžbi.
 
-## Technologies Used
-- **Java**: Core programming language
-- **JavaScript**: Used for dynamic web elements interaction and validation
-- **Selenium WebDriver**: Web automation framework (version 4.26.0)
-- **TestNG**: Testing framework for test organization and execution (version 7.10.2)
-- **Maven**: Dependency management and build automation
-- **iText**: PDF generation and manipulation (version 5.5.13.3)
-- **Chrome WebDriver**: Browser automation driver
-- **Java CSV**: CSV file handling for data-driven testing
-
+## Korištene tehnologije
+- **Java**: Glavni programski jezik
+- **JavaScript**: Korišteno za interakciju s dinamičkim web elementima
+- **Selenium WebDriver**: Framework za web automatizaciju (version 4.26.0)
+- **TestNG**: Testing framework za organizaciju i izvršavanje testova (version 7.10.2)
 
 ## Features
-1. **User Registration**
-   - Automated user account creation
-   - Random data generation for unique users
-   - Form validation testing
+Scenarij za izradu automatiziranog testa:
 
-2. **Product Management**
-   - Product search and selection
-   - Size and quantity selection
-   - Add to cart functionality
-
-3. **Shopping Cart**
-   - Cart management
-   - Product quantity updates
-   - Cart total verification
-
-4. **Checkout Process**
-   - Complete order placement
-   - Address verification
-   - Payment method selection
-
-5. **Order Management**
-   - Order history tracking
-   - Order details verification
-   - PDF generation of order details
-
-6. **Test Reporting**
-   - Detailed HTML test reports
-   - Test execution statistics
-   - Failure screenshots
-   - Test data logging
-
-## Test Data Management
-- Dynamic data generation for unique test runs
-- CSV file support for data-driven testing
-- Random user information generation
-
-## Reporting Features
-The framework generates detailed HTML reports including:
-- Test execution summary
-- Test case status (Pass/Fail/Skip)
-- Execution time and duration
-- Test data used
-- Error messages for failed tests
-- Order details and user information
-
-## Prerequisites
-- Java JDK 11 or higher
-- Maven 3.6 or higher
-- Chrome browser
-- Chrome WebDriver matching your Chrome version
-
-## Setup Instructions
-1. Clone the repository:
-   ```bash
-   git clone [repository-url]
-   ```
-
-2. Install dependencies:
-   ```bash
-   mvn clean install
-   ```
-
-3. Update `testng.xml` if needed for specific test suite configuration
-
-4. Run tests:
-   ```bash
-   mvn test
-   ```
-
-## Configuration
-- Browser settings can be modified in `FirstSeleniumTest.java`
-- Test suite configuration in `testng.xml`
-- Maven dependencies in `pom.xml`
-
-## Test Execution
-### Running All Tests
-```bash
-mvn clean test
-```
-
-### Running Specific Test Classes
-```bash
-mvn test -Dtest=FirstSeleniumTest
-```
+1.	Otvori stranicu http://www.automationpractice.pl/
+2.	Otvori Sign in
+3.	Registriraj se
+4.	Upiši podatke o osobi na način da svaki put kada se ponovno pusti ova skripta upisuje nove podatke (ime, prezime, email, lozinka, datum rođenja) koji se spremaju kako bi se mogli    ponovo upotrijebiti tijekom testa
+5.	Otvori Women izbornik
+6.	Sort by: Product name: A-Z
+7.	Filtriraj po boji: Crna
+8.	Namjesti Price range $20 - $30 
+9.	Otvori proizvod Blouse
+10.	Promjeni Size na L
+11.	Add to cart
+12.	Provjeri jel se pojavila poruka o uspješnom dodavanju proizvoda u košaricu 
+13.	Continue shopping
+14.	Otvori Contact us na vrhu stranice
+15.	Ispuni podatke (dodaj file, u poruci ispiši podatke o osobi koja je registrirana - ime, prezime, email, datum rođenja) i pošalji te provjeri poruku o uspješnom slanju
+16.	Otvori svoj račun
+17.	Provjeri svoje podatke (ime, prezime, email, datum rođenja) 
+18.	Otvori košaricu i nastavi do plaćanja
+19.	Otvori Order history
+20.	Preuzmi PDF dokument o narudžbi
+21.	Ispiši Test report u aplikaciji sa podacima o osobi (ime, prezime, email, lozinka, datum rođenja) i podacima o narudžđbi (broj narudžbe, datum, cijena)
 
 ## Reporting
-- HTML reports are generated in `test-reports/` directory
-- Order PDFs are generated in `invoice/` directory
-- Console logs provide real-time execution status
+- HTML izvještaji se generiraju u direktoriju test-reports/
+- PDF-ovi narudžbi se generiraju u direktoriju invoice/
+- Konzolni logovi pružaju status izvođenja u stvarnom vremenu
 
-## Best Practices Implemented
-1. **Page Object Model**
-   - Organized test structure
-   - Reusable page elements
-   - Maintainable code
+## Demo
+`demo` folder sadrži .mp4 datoteku koja prikazuje demo snimku prve verzije ovog projekta.
 
-2. **Wait Strategies**
-   - Explicit waits
-   - Dynamic element handling
-   - Timeout management
+## Licenca
+Ovaj projekt je licenciran pod MIT licencom - pogledajte datoteku LICENSE za detalje.
 
-3. **Error Handling**
-   - Comprehensive exception management
-   - Detailed error logging
-   - Recovery mechanisms
-
-4. **Test Data Management**
-   - Dynamic data generation
-   - Data-driven approach
-   - Clean test data
-
-## Demo Recording
-The `video` folder contains .mp4 file showing demo recording of the first version of the automation framework.
-
-## License
-This project is licensed under the MIT License - see the LICENSE file for details.
-
-## Author
+## Autor
 Ivona Crnković
-
-## Acknowledgments
-- Selenium WebDriver documentation
-- TestNG documentation
-- Maven documentation
-- iText PDF library
