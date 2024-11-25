@@ -41,7 +41,7 @@ Scenarij za izradu automatiziranog testa:
 
 ## Demo
 `demo` folder sadrži .mp4 datoteku koja prikazuje demo snimku prve verzije ovog projekta.
-Link na video: https://github.com/CrnkovicIvona/automation-practice/blob/master/demo/FirstVersion.mp4 
+Link na video: https://github.com/CrnkovicIvona/automation-practice/tree/master/demo 
 
 ## Licenca
 Ovaj projekt je licenciran pod MIT licencom - pogledajte datoteku LICENSE za detalje.
